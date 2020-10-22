@@ -50,8 +50,8 @@ class Group(BaseGroup):
 
     #The group-level is used to define values that are the same for every player in the group and to aggregate over the players.
 
-    # To determine if a groups pool breaks down, we create a random number that takes values between 0 and 1.
-    # If the tipping point is higher than the tipping point, breakdown will be TRUE.
+    #We check if the pool breaks down by calling the tipping point and calculating the reamining points. 
+    # If the tipping point is higher than the remaining points, breakdown will be TRUE.
     # We set this breakdown as a function that can be called during the experiment.
     # Since we only evaluate it if we are playing the treatment, we condition it by an if statement.
 
