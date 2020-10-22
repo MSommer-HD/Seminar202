@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block content %}
+
+    <p> You took {{take}} points. {{total_points_left}} points remained in the pool and increased to {{pool_mult}} points.<br>
+        <! Here we need an if statement, since the players in the treatment determines if he gets info of the pool breaking down or not.
+        In this special case we have a nested loop. For those the syntax remains the same as a normal loop>
+        {% if treatment == 1 %}
+            {% if breakdown == 1 %}
+                Unfortunately the pool broke down.
+            {%else%}
+                Fortunately the pool did not brake down.
+            {% endif %} <br>
+        {% endif %}
+        This means your share is {{share}} points and you earned {{payoff}}
+    </p>
+
+{% endblock %}
+
+

@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Take
+{% endblock %}
+
+{% block content %}
+    <p>You can take between 0 and {{ max }} points. <br>
+       {% formfield player.take %}</p>
+    {% next_button %}
+
+{% endblock %}
