@@ -28,7 +28,7 @@ class Constants(BaseConstants):
     num_rounds = 1 # You can play more than one round, but in our case we play one.
     pool = 30 #This defines how big the pool is. You can use any INT or String here
     efficiency_factor = 2 # This is a INT that indicates how the resource increases the leftover points. You can use any INT or String here
-    tipping_point = 15 # This is the value that acts as a threshhold. If less than those points remain the pool collapses. You can insert any float between 0 and 1.
+    tipping_point = 15 # This is the value that acts as a threshhold. If less than those points remain the pool collapses. You can insert any INT between 0 and Constants.pool
     max = int(np.floor(pool / players_per_group)) #The max value is calculated by the point available and the number of players.
     # np.floor rounds it down and int converts it to an integer. The last step is not necessary, but it looks better.
 
